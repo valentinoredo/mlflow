@@ -14,7 +14,7 @@ import click
     help="Downloads the MovieLens dataset and saves it as an mlflow artifact "
     " called 'ratings-csv-dir'."
 )
-@click.option("--url", default="http://files.grouplens.org/datasets/movielens/ml-20m.zip")
+@click.option("--url", default="https://files.grouplens.org/datasets/movielens/ml-20m.zip")
 def load_raw_data(url):
     with mlflow.start_run() as mlrun:
         local_dir = tempfile.mkdtemp()
